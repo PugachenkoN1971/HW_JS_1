@@ -81,6 +81,7 @@ if(number==10) {
 }
 /*****/
 
+
 /*
 4. Ми маємо змінну x в яку користувач задає  значення,  якщо в змінну записане число, вивести 1,
     якщо в змінну записали стрінгу вивести 2, якщо булеве значення - 3, якщо об'єкт або масив - 3.
@@ -96,27 +97,27 @@ x1=[1, 2, 3, 'stroka'];
 
 console.log(x1);
 
-//
-// switch (tips) {
-//     case "number":
-//         console.log("Числовой тип");
-//         alert("Числовой тип");
-//         break;
-//     case "Apples":
-//         console.log("Apples are $0.32 a pound.");
-//         break;
-//     case "Bananas":
-//         console.log("Bananas are $0.48 a pound.");
-//         break;
-//     case "Cherries":
-//         console.log("Cherries are $3.00 a pound.");
-//         break;
-//     case "Mangoes":
-//     case "Papayas":
-//         console.log("Mangoes and papayas are $2.79 a pound.");
-//         break;
-//     default:
-//         console.log("Sorry, we are out of);
-// }
+
+ switch (tips) {
+     case "number":
+         console.log("Числовой тип");
+         alert("Числовой тип");
+         break;
+     case "Apples":
+         console.log("Apples are $0.32 a pound.");
+         break;
+     case "Bananas":
+         console.log("Bananas are $0.48 a pound.");
+         break;
+     case "Cherries":
+         console.log("Cherries are $3.00 a pound.");
+         break;
+     case "Mangoes":
+     case "Papayas":
+         console.log("Mangoes and papayas are $2.79 a pound.");
+         break;
+     default:
+         console.log("Sorry, we are out of");
+ }
 //
 // console.log("Is there anything else you'd like?");
