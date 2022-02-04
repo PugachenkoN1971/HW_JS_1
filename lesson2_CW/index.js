@@ -16,7 +16,7 @@
 якщо в змінну записали щось інше, спрацьовує else
 
 
-- Задача-гра "чи ми йдемо сьогодні в OKTEN на навчання?".
+5. Задача-гра "чи ми йдемо сьогодні в OKTEN на навчання?".
     Змінна, яка характеризує температуру. Якщо температура від +10 до +22 вивести повідомлення що ми йдемо ВЧИТИСЯ .
     Якщо інша темпаретура, тоді виводимо повідомлення що сидимо вдома і вчимося ОНЛАЙН
 
@@ -84,42 +84,67 @@ if(number==10) {
 
 /*
 4. Ми маємо змінну x в яку користувач задає  значення,  якщо в змінну записане число, вивести 1,
-    якщо в змінну записали стрінгу вивести 2, якщо булеве значення - 3, якщо об'єкт або масив - 3.
+    якщо в змінну записали стрінгу вивести 2, якщо булеве значення - 3, якщо об'єкт або масив - 4.
 якщо в змінну записали щось інше, спрацьовує else
 */
 
+/*
 let x1;
+let k;
+let x22;
+for(k=0;k<1;k++) {
+    x22=prompt('Введите число от 6 до 9', 1);
+}
+    if (x22==6) {
+        x1=20;
+        console.log(x1);
+    }
+    else if(x22==7) {
+        x1='snroka';
+        console.log(x1);
+    }
+    else if(x22==8) {
+        x1=true;
+        console.log(x1);
+    }
+    else if(x22==9) {
+         x1=x1=[1, 2, 3, 'stroka'];
+         console.log(x1);
+    }
 
-//x1=20;
-//x1='stroka';
-//x1=true;
-x1=[1, 2, 3, 'stroka'];
-
-console.log(x1);
-let tips;
-
-
-tips=typeof (x1);
+let tips=typeof (x1);
+console.log(tips);
  switch (tips) {
      case "number":
-         console.log("Числовой тип");
-         alert("Числовой тип");
+         console.log("Переменнтая числового типа");
+         document.write(`<h2>1</h2>`);
+         document.write(`<h2>Переменнтая числового типа</h2>`);
          break;
-     case "Apples":
-         console.log("Apples are $0.32 a pound.");
+     case "string":
+         console.log("Переменнтая строчного типа");
+         document.write(`<h2>2</h2>`);
+         document.write(`<h2>Переменнтая строчного типа</h2>`);
          break;
-     case "Bananas":
-         console.log("Bananas are $0.48 a pound.");
+     case "boolean":
+         console.log("Переменнтая булевого типа");
+         document.write(`<h2>3</h2>`);
+         document.write(`<h2>Переменнтая булевого типа</h2>`);
          break;
-     case "Cherries":
-         console.log("Cherries are $3.00 a pound.");
-         break;
-     case "Mangoes":
-     case "Papayas":
-         console.log("Mangoes and papayas are $2.79 a pound.");
+     case "object":
+         console.log("Переменнтая булевого типа");
+         document.write(`<h2>4</h2>`);
+         document.write(`<h2>Переменнтая типа "объект"</h2>`);
          break;
      default:
-         console.log("Sorry, we are out of");
+         console.log("Переменнтая булевого типа");
+         document.write(`<h2>????????</h2>`);
+         document.write(`<h2>Тип переменной не определен</h2>`);
  }
-//
-// console.log("Is there anything else you'd like?");
+/*****/
+
+/*
+5. Задача-гра "чи ми йдемо сьогодні в OKTEN на навчання?".
+    Змінна, яка характеризує температуру. Якщо температура від +10 до +22 вивести повідомлення що ми йдемо ВЧИТИСЯ .
+    Якщо інша темпаретура, тоді виводимо повідомлення що сидимо вдома і вчимося ОНЛАЙН
+*/
+
