@@ -96,8 +96,10 @@ let x1;
 x1=[1, 2, 3, 'stroka'];
 
 console.log(x1);
+let tips;
 
 
+tips=typeof (x1);
  switch (tips) {
      case "number":
          console.log("Числовой тип");
