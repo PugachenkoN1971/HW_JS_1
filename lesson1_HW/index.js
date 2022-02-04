@@ -43,10 +43,9 @@ document.write(`<h1>Homework_JS_#1</h1>`);
     Вивести кожну змінну за допомогою: console.log , alert, document.write
 */
 
+/*
 let massiv = ['hello', 'owu', 'com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false];
 
-
-/*
 let i;
 for(i=0;i<massiv.length;i++) {
     console.log(massiv[i]);
