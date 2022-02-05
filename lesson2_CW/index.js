@@ -87,22 +87,22 @@ if(number==10) {
     якщо в змінну записали стрінгу вивести 2, якщо булеве значення - 3, якщо об'єкт або масив - 4.
 якщо в змінну записали щось інше, спрацьовує else
 */
-/*
+
 let x1;
 let x22=prompt('Введите число от 6 до 9', 1);
-    if (x22==6) {
+    if (x22==='6') {
         x1=20;
         console.log(x1);
     }
-    else if(x22==7) {
-        x1='snroka';
+    else if(x22==='7') {
+        x1='stroka';
         console.log(x1);
     }
-    else if(x22==8) {
+    else if(x22==='8') {
         x1=true;
         console.log(x1);
     }
-    else if(x22==9) {
+    else if(x22==='9') {
          x1=x1=[1, 2, 3, 'stroka'];
          console.log(x1);
     }
@@ -162,7 +162,7 @@ if(10<=x10 && x10<=22) {
 Повідомлення - що число не вірне ... .
  */
 
-
+/*
 let chislo;
 chislo=prompt('Угадайте число', 10);
 console.log(chislo);
