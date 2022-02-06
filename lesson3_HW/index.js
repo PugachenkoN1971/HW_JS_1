@@ -46,7 +46,7 @@
 let chisla=[33, -258, 156, -57, 48];
 let stroki=['JavaScript', 'USA', 'c++', 'MAn', 'ADIDAS'];
 let mass1=['GAP', 'true', 213, false, 'Iffan'];
-let i;
+//let i;
 
 console.log('___Массив_из_5_числовых_элементов__________________________');
 for(let a of chisla) {
@@ -67,39 +67,69 @@ for(let a of mass1) {
 /*
 2. Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу.
     Вивести в консоль
-
-2.1 За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
-2.2 За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
-2.3 За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
-2.4 За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
 */
 
-let mass2=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-let i,j;
+let mass2=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+let mass3=['method', 'takescallback', 'that', 'performs', 'operation', 'elements', 'returns', 'containing',
+    'resulting', 'running', 'operation', 'does', 'mutate', 'calling'];
+let mass4=[25, -56, 92, 253, -17, 35, 191, -15, 68, 19, -73];
+let mass5=[true, false, false, true, true, true, false, false, true, false, true, false];
+
+let i,j,k,t,n;
+j=0;
+k=0;
+t=0;
+n=0;
 for (i=0;i<mass2.length;i++) {
-    mass2[i]=i/3*10;
+    if(j===0) {
+        mass2[i]=mass3[k];
+        k++;
+    } else if(j===1) {
+        mass2[i]=mass4[t];
+        t++;
+    } else if (j===2) {
+        mass2[i]=mass5[n];
+        n++;
+    }
+    if (j<2) {
+        j++;
+    } else {
+        j=1;
+    }
+  //  mass2[i]=mass3[i];
     console.log('mass2[',i,']=',mass2[i]);
 }
-
-/*for (a of mass2) {
-    if(a<=5) {
-        mass2[a]=a/3*10;
-    } else if (5<a && a<=10) {
-        mass2[a]='stroka';
-    } else if (10<a && a<=15) {
-        mass2[a]='stroka';
-    }
-
-console.log(mass2[a]);
-
-    a++;
-}
-
 /***/
+/* 2.1 За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині */
+let mass7=['Mercedes-Benz', 'Toyota', 'BMW', 'Porsche', 'Audi', 'Volkswagen', 'Ford', 'Chevrolet', 'Mazda',
+           'Nissan'];
 
-
-
-
+document.write(`<h2>Известные марки авто:</h2>`);
+for (i=0;i<mass7.length;i++) {
+    document.write(`<div>${mass7[i]}</div>`);
+}
+/* 2.2 За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині */
+document.write(`<h2>___Известные марки авто:___</h2>`);
+for (i=0;i<mass7.length;i++) {
+    document.write(`<div>${i+1}.--------${mass7[i]}</div>`);
+}
+/* 2.3 За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині */
+let mass8=['Mercedes-Benz', 'Toyota', 'BMW', 'Porsche', 'Audi', 'Volkswagen', 'Ford', 'Chevrolet', 'Mazda',
+    'Nissan', 'Opel', 'Subaru', 'Suzuki', 'Lexus', 'Mitsubishi', 'Jeep','Cadillac', 'Lincoln', 'Ferrari',
+    'Lamborghini'];////, 'Maserati', 'Fiat'];
+document.write(`<h1>__________Известные марки авто:____________</h1>`);
+i=0;
+while (i<mass8.length) {
+    document.write(`<h1>${mass8[i]}</h1>`);
+    i++;
+}
+/* 2.4 За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині */
+document.write(`<h1>__________Известные марки авто:____________</h1>`);
+i=0;
+while (i<mass8.length) {
+    document.write(`<h1>${i+1}.   ${mass8[i]}</h1>`);
+    i++;
+}
 
 
 
