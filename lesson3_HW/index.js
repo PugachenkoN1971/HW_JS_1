@@ -43,8 +43,27 @@
     1.4 та вивести його в консоль
 */
 
+let chisla=[33, -258, 156, -57, 48];
+let stroki=['JavaScript', 'USA', 'c++', 'MAn', 'ADIDAS'];
+let mass1=['GAP', 'true', 213, false, 'Iffan'];
+let i;
 
-
+console.log('___Массив_из_5_числовых_элементов__________________________');
+for(let a of chisla) {
+    console.log(a);
+    a++;
+}
+console.log('___Массив_из_5_строчных_элементов__________________________');
+for(let a of stroki) {
+    console.log(a);
+    a++;
+}
+console.log('___Массив_из_5_элементов_(числовые_строчные_булевы)_________');
+for(let a of mass1) {
+    console.log(a);
+    a++;
+}
+/**/
 
 
 
