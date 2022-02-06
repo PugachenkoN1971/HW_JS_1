@@ -42,8 +42,10 @@
     1.3. з 5 значень стрічкового, числового та булевого типу
     1.4 та вивести його в консоль
 */
+document.write(`<h1>HomeWork_JS_#3</h1>`);
+console.log('HomeWork_JS_#3');
 let i;
-/*
+
 let chisla=[33, -258, 156, -57, 48];
 let stroki=['JavaScript', 'USA', 'c++', 'MAn', 'ADIDAS'];
 let mass1=['GAP', 'true', 213, false, 'Iffan'];
