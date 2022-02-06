@@ -115,7 +115,3 @@ for(i=massiv1.length-1; i>=0; i--) {
     console.log('Massiv1 [',i,']=', massiv1[i]);
 }
 /*****/
-
-
-
-
