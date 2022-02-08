@@ -138,4 +138,27 @@ function sredArM(mass) {
 }
 SredAr=sredArM(mass1);
 document.write(`<h3>Среднее арифметическое массива mass1 равно: ${SredAr}</h3>`);
+/* 7. Створити функцію яка приймає будь-яку кількість чисел, повертає найменьше,  */
+/*    а виводить найбільше (Math використовувати заборонено);                     */
+document.write(`<h2>___Задание 7____Створити функцію яка приймає будь-яку кількість
+ чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);</h2>`);
+function sr() {
+    let min;
+    let max;
+    let i;
+    min = arguments[0];
+    max = arguments[0];
 
+    for (i = 0; i < arguments.length; i++) {
+        if (arguments[i] < min) {
+            min = arguments[i];
+        }
+        if (arguments[i] > max) {
+            max = arguments[i];
+        }
+    }
+    document.write(`<h3>Максимальный элемент равен: ${max}</h3>`);
+    return min;
+}
+min1=sr(2,4,6,78,-980,6,4,-34,6,78,9,444,65,45,-777);
+document.write(`<h3>Минимальное число массива ${min1}</h3>`);
