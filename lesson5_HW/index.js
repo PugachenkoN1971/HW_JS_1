@@ -43,7 +43,7 @@ console.log('Площадь круга равна: ', sKr);
 /*    3.  Створити функцію яка обчислює та повертає площу циліндру  */
 document.write(`<h3>____Задача №3____Створити функцію яка обчислює та повертає площу циліндру</h3>`);
 const sqCil = (r, h) => {
-    s = 2 * Math.PI * Math.pow(r, 2) + 2 * Math.PI * r*h;
+    s = 2 * Math.PI * Math.pow(r, 2) + 2 * Math.PI * r * h;
     document.write(`<h3>Площадь цилиндра равна: ${s}</h3>`);
     return s;
 }
@@ -71,22 +71,17 @@ pVivod(arg);
 pVivod('Задача №5 выполнена');
 /*    6.  Cтворити функцію яка  створює ul з трьома елементами li.  */
 document.write(`<h3>____Задача №6____Cтворити функцію яка  створює ul з трьома елементами li.</h3>`);
+const fooUl = (mass) => {
+    let i;
+    document.write(`<ul>`);
+    for(i=0;i<mass.length;i++) {
+        document.write(`<li>${mass[i]}</li>`);
+    }
+    document.write(`</ul>`);
+}
+tovari=['Чай','Кофе','Fanta','Pepsi kola','Coca kola','Яблочный сок'];
+fooUl(tovari);
 
-
-//let sCil = sqCil(2, 3);
-//console.log('Площадь цилиндра равна: ', sCil);
-
-
-//document.write(`<h3>Площадь прямоугольника равна: ${sPr}</h3>`);
-
-//let array = [1,2,3,4,5, 'hello world', 'okten'];
-//
-// const dataArray =  (array) => {
-//     for (let i = 0; i < array.length; i++) {
-//        document.write(array[i]);
-//     }
-// }
-// dataArray(array);
 
 
 
