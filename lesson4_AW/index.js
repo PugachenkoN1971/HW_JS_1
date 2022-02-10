@@ -17,10 +17,20 @@
 /*      EXAMPLE:                                                                    */
 /*      [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]       */
 /************************************************************************************/
+document.write(`<h1>AdditionalWork_#4</h1>`);
+console.log('AdditionalWork_#4');
+/*  1. Cтворити функцію, яка якщо приймає один аргумент, просто вивдоить його,       */
+/*     якщо два аргументи - складає або конкатенує їх між собою.                     */
 
-
-
-
+function funcSch() {
+    let i;
+    console.log('_________',arguments.length);
+    for(i=0;i<arguments.length;i++) {
+        console.log(arguments[i]);
+    }
+}
+funcSch(14416,-2001241,35121,46454,654,16631,1);
+funcSch(2);
 
 
 
