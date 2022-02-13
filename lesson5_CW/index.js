@@ -198,4 +198,3 @@ document.write(`<h3>   Массив элементов в обратном по�
 for (k = 0; k < massArrOut.length; k++) {
     document.write(`<h3>Элемент [${k+1}] массива: ${massArrOut[k]}</h3>`);
 }
-
