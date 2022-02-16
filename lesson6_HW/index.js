@@ -150,10 +150,3 @@ const capitalize = (str) => {
 let massOut9 = capitalize(massIn9);
 console.log(capitalize(massIn9));
 document.write(`<h3>Фраза после обработки:</h3><p>${massOut9}</p>`);
-
-
-
-
-
-
-
