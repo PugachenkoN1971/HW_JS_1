@@ -61,7 +61,6 @@ let str = ' dirty string   ' . Почистити її від зайвих пр�
 console.log('___Задание__№4___');
 let strChist = '        dirty string   ';
 console.log(strChist, strChist.length);
-//console.log(strChist.length);
 document.write(`<h3>${strChist}__Размер строки равен:${strChist.length}</h3>`);
 let strChist1 = strChist.trim();  /* Убираем лишнии пробелы */
 console.log(strChist1, strChist1.length);
@@ -87,8 +86,7 @@ document.write(`<h3>  Задание №6   Напишіть функцію dele
 let str = 'Каждый охотник желает знать'; 
 document.writeln(delete_characters(str, 7)); // Каждый </h3>`);
 const delete_characters = (str, length1) => {
-    //let str1 = str.substr(0, length1);
-    return str.substr(0, length1); //str1;
+    return str.substr(0, length1);
 }
 let strOut1 = delete_characters(strIn, 6);
 document.write(`<h3>${strOut1}</h3>`);
