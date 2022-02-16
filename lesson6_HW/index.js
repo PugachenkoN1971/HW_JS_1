@@ -18,15 +18,11 @@
 /*       і вставляє тире (-) між словами. При цьому всі символи рядка необхідно  */
 /*       перевести у верхній регістр. let str = "HTML JavaScript PHP";           */
 /*       document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'            */
-/*
-
-- Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
-
-
-
-- Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
-
- */
+/*   8.  Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр    */
+/*        першого символу рядка з нижнього регістру у верхній.                   */
+/*   9.  Напишіть функцію capitalize(str), яка повертає рядок, у якому           */
+/*          кожне слово починається з великої літери.                            */
+/*********************************************************************************/
 document.write(`<h1>HomeWork #6</h1>`);
 console.log('HomeWork #6');
 /*   1. Знайти та вивести довижину настипних стрінгових значень  */
@@ -91,8 +87,8 @@ document.write(`<h3>  Задание №6   Напишіть функцію dele
 let str = 'Каждый охотник желает знать'; 
 document.writeln(delete_characters(str, 7)); // Каждый </h3>`);
 const delete_characters = (str, length1) => {
-    let str1 = str.substr(0, length1);
-    return str1;
+    //let str1 = str.substr(0, length1);
+    return str.substr(0, length1); //str1;
 }
 let strOut1 = delete_characters(strIn, 6);
 document.write(`<h3>${strOut1}</h3>`);
@@ -105,9 +101,10 @@ document.write(`<h3>  Задание №7   Напишіть функцію inse
 яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому
  всі символи рядка необхідно  перевести у верхній регістр. 
  let str = "HTML JavaScript PHP"; document.writeln(insert_dash(str)); 
-  'HTML-JAVASCRIPT-PHP' </h3>`);
+  'HTML-JAVASCRIPT-PHP'</h3>`);
 const insert_dash = (str) => {
     let strO = str.toUpperCase();
+    strO = strO.replaceAll(' ', '-');
     return strO;
 }
 console.log('-----------------------------');
@@ -116,7 +113,45 @@ console.log(str23);
 console.log('-----------------------------');
 let strOO = insert_dash(str23);
 console.log(strOO);
+document.write(`<div><h3>Строка до обработки:</h3>
+                     <h4>${str23}</h4>
+                     <h3>Строка после обработки:</h3>
+                     <h4>${strOO}</h4></div>`);
+/*   8.  Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр    */
+/*        першого символу рядка з нижнього регістру у верхній.                   */
+document.write(`<h3>  Задание №8   Напишіть функцію, яка приймає рядок як 
+аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.</h3>`);
 
+const upperFirstChar = (str) => {
+    let firstChar = str.slice(0, 1);
+    firstChar = firstChar.toUpperCase() + str.slice(1);
+    return firstChar;
+}
+let fraza = 'хороший сисадмин ничего не делает, oн раз сделал и у него все работает.';
+let frazaNew = upperFirstChar(fraza);
+console.log(fraza);
+console.log(frazaNew);
+document.write(`<div><h3>Строка до обработки (первая буква предложения - строчная):</h3>
+<h4>${fraza}</h4><h3>Строка после обработки (первая буква предложения - заглавная):</h3>
+<h4>${frazaNew}</h4></div>`);
+/*   9.  Напишіть функцію capitalize(str), яка повертає рядок, у якому  */
+/*          кожне слово починається з великої літери.                   */
+/************************************************************************/
+document.write(`<h3>  Задание №9  Напишіть функцію capitalize(str), 
+яка повертає рядок, у якому кожне слово починається з великої літери.</h3>`);
+let massIn9='иван наталья john sarah андрей сергей виктория екатерина';
+document.write(`<h3>Фраза до обработки:</h3><p>${massIn9}</p>`);
+const capitalize = (str) => {
+    let massStr = str.split(' ');
+    let massOut = [];
+    for (i = 0; i < massStr.length; i++) {
+        massOut[i] = massStr[i].charAt(0).toUpperCase() + massStr[i].slice(1);
+    }
+    return massOut.join(' ');
+}
+let massOut9 = capitalize(massIn9);
+console.log(capitalize(massIn9));
+document.write(`<h3>Фраза после обработки:</h3><p>${massOut9}</p>`);
 
 
 
