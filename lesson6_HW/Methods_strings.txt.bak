@@ -1,0 +1,60 @@
+Метод concat() объединяет текст из двух или более строк и возвращает новую строку.
+Метод toLowerCase() возвращает значение строки, на которой он был вызван, преобразованное в нижний регистр.
+Метод toUpperCase() возвращает значение строки, на которой он был вызван, преобразованное в верхний регистр.
+Метод endsWith() позволяет определить, заканчивается ли строка символами указанными в скобках, возвращая, соответственно, true или false.
+Метод startsWith() помогает определить, начинается ли строка с символов указанных в скобках, возвращая, соответственно, true или false.
+Метод charAt() возвращает указанный символ из строки. Входящий параметр - индекс элемента в массиве.
+
+
+Метод endsWith() позволяет определить, заканчивается ли строка символами указанными в скобках, возвращая, соответственно, true или false.
+
+// String methods
+    // String.prototype.concat()
+    // String.prototype.toLowerCase()
+    // String.prototype.toUpperCase()
+    // String.prototype.endsWith()
+    // String.prototype.startsWith()
+    // String.prototype.charAt()
+    // String.prototype.includes()
+    // String.prototype.indexOf()
+    // String.prototype.lastIndexOf()
+    // String.prototype.replace()
+    // String.prototype.replaceAll()
+    // String.prototype.substring()
+    // String.prototype.split()
+
+    // Array.isArray()
+    // Array.prototype.push()
+    // Array.prototype.pop()
+    // Array.prototype.shift()
+    // Array.prototype.unshift()
+    // Array.prototype.join()
+    // Array.prototype.concat()
+    // Array.prototype.reverse()
+    // Array.prototype.indexOf()
+    // Array.prototype.splice()
+    // Array.prototype.includes()
+
+    // Array.prototype.forEach()
+    // Array.prototype.filter()
+    // Array.prototype.map()
+    //
+    // Array.prototype.sort()
+    // Array.prototype.find()
+    // Array.prototype.every()
+    // Array.prototype.some()
+    // Array.prototype.flat()
+    // Array.prototype.flatMap()
+    // Array.prototype.reduce()
+    
+    
+     console.log(users.reduce((basket, user) => {
+        if (user.status) {
+            basket.statusTrue.push(user);
+        } else {
+            basket.statusFalse.push(user);
+
+        }
+        return basket;
+
+    }, {statusTrue: [], statusFalse: []}));
