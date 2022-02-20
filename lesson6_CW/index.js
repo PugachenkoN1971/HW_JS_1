@@ -126,6 +126,7 @@ document.write(`<h3>Массив чисел, из которого неодхо�
 ${massivChisel}</h3>`);
 console.log(massSluch);
 console.log('------------------------------------');
+
 const filterFooChetnie = (element) => {
     if (element % 2) {
         return false;
@@ -208,7 +209,7 @@ let coursesAndDurationArray = [
                  {title: 'QA Complex', monthDuration: 4},
                  {title: 'FullStack', monthDuration: 7},
                  {title: 'Frontend', monthDuration: 4}
-                  ];
+                 ];
 
 
 
