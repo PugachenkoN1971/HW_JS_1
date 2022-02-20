@@ -166,7 +166,7 @@ document.write(`<h3>Массив чисел после обработки:  ${ma
 document.write(`<div><h3>____Задание №6____Створити функцію sortNums(direction), яка прймає масив
 чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу
 direction. let nums = [11,21,3]; 
-sortNums('ascending') // [3,11,21] sortNums('descending') // [21,11,3] */</h3></div>`);
+sortNums('ascending') // [3,11,21] sortNums('descending') // [21,11,3]</h3></div>`);
 let massChis = [28, 65, 85, 15, 35, 29, 46, 17, 95, 24, 69, 75, 12];
 function sortNums(direction) {
     if (direction === 'vozrastanie') {
@@ -202,6 +202,16 @@ console.log(massChis);
 /*                  ];
 /*      7.1.  Відсортувати його за спаданням за monthDuration
 ************************************************************************/
+document.write(`<div><h3>____Задание №7____є масив let coursesAndDurationArray = [
+{title: 'JavaScript Complex', monthDuration: 5},
+{title: 'Java Complex', monthDuration: 6},
+{title: 'Python Complex', monthDuration: 6},
+{title: 'QA Complex', monthDuration: 4},
+{title: 'FullStack', monthDuration: 7},
+{title: 'Frontend', monthDuration: 4}
+];
+ 7.1.  Відсортувати його за спаданням за monthDuration
+</h3></div>`);
 let coursesAndDurationArray = [
                  {title: 'JavaScript Complex', monthDuration: 5},
                  {title: 'Java Complex', monthDuration: 6},
@@ -210,6 +220,63 @@ let coursesAndDurationArray = [
                  {title: 'FullStack', monthDuration: 7},
                  {title: 'Frontend', monthDuration: 4}
                  ];
+console.log('/**************************************************************************************/');
+console.log(coursesAndDurationArray);
+coursesAndDurationArray.sort(function (a, b) {
+    if (a.monthDuration > b.monthDuration) {
+        return 1;
+    }
+    if (a.monthDuration < b.monthDuration) {
+        return -1;
+    }
+    // a должно быть равным b
+    return 0;
+});
+
+console.log('/**************************************************************************************/');
+
+
+console.log('/**************************************************************************************/');
+
+
+
+
+
+
+
+
+
+///let user = new User('kokos', 1111);
+
+
+let items = [
+    { name: 'Edward', value: 21 },
+    { name: 'Sharpe', value: 37 },
+    { name: 'And', value: 45 },
+    { name: 'The', value: -12 },
+    { name: 'Magnetic', value: 25},
+    { name: 'Zeros', value: 39 }
+];
+items.sort(function (a, b) {
+    if (a.value > b.value) {
+        return 1;
+    }
+    if (a.value < b.value) {
+        return -1;
+    }
+    // a должно быть равным b
+    return 0;
+});
+console.log('/////////////////////////////////////////////////////////////////////////////');
+console.log(items);
+
+
+
+
+
+
+
+
 
 
 

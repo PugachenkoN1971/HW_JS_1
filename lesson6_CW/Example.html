@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
+    <title>Example</title>
 </head>
 <body>
 <script>
@@ -67,23 +67,21 @@
     // console.log(user1.skills[2]);
 
     class User {
-
         constructor(username, age) {
             this.username = username;
             this.age = age;
         }
-
         greeting() {
             return 'hello my name is ' + this.username;
-
         }
-
     }
+    let user = new User('Александр', 34);
+    user = new User('Сергей', 31);
 
-    let user = new User('kokos', 1111);
+
     console.log(user)
     console.log(user.greeting());
-
+/*
     class SuperUser extends User {
         constructor(username, age, status) {
             super(username, age);
@@ -100,7 +98,7 @@
     console.log(superUser);
     console.log(superUser.greeting());
 
-
+*/
 </script>
 
 </body>
