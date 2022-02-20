@@ -15,14 +15,13 @@
         числових значень. Відсортувати його за допомоги sort
     4. Створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих
          числових значень. відфільтрувати  його за допомоги filter, залишивши тільки парні числа
-- створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої функції) .
-за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
-- створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого,
-або навпаки в залежності від значення аргументу direction.
-    let nums = [11,21,3];
-sortNums('ascending') // [3,11,21]
-sortNums('descending') // [21,11,3]
-
+    5. Створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої
+         функції) .  за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
+    6. Створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого
+         до меньшого, або навпаки в залежності від значення аргументу direction.
+              let nums = [11,21,3];
+               sortNums('ascending') // [3,11,21]
+               sortNums('descending') // [21,11,3]
 */
 
 /*
@@ -130,11 +129,11 @@ ${massivChisel}</h3>`);
 console.log(massSluch);
 console.log('------------------------------------');
 const filterFooChetnie = (element) => {
-        if (element % 2) {
-            return false;
-        } else {
-            return true;
-        }
+    if (element % 2) {
+        return false;
+    } else {
+        return true;
+    }
 }
 const filterFooNeChetnie = (element) => {
     if (element % 2) {
@@ -149,21 +148,51 @@ let massivChiselOutNeChet = massivChisel.filter(filterFooNeChetnie);
 document.write(`<h3>Массив четных чисел:  ${massivChiselOutChet}</h3>`);
 document.write(`<h3>Массив нечетных чисел:  ${massivChiselOutNeChet}</h3>`);
 console.log(massChetniChisla);
-console.log('------------------------------------');
+/* 5. Створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої  */
+/*     функції) .  за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.     */
+document.write(`<div><h3>____Задание №5____Створити масив рандомних цілих числових значень 
+(або згенерувати, за допомоги попередньої функції) .  
+за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові. </h3></div>`);
+const massIntToStr = (mass) => {
+    return 'stroka';
+}
+document.write(`<h3>Массив чисел до обработки:  ${massivChisel}</h3>`);
+massivChisel = massivChisel.map(massIntToStr);
+document.write(`<h3>Массив чисел после обработки:  ${massivChisel}</h3>`);
+/*  6. Створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого */
+/*      до меньшого, або навпаки в залежності від значення аргументу direction.  */
+/*        let nums = [11,21,3];  */
+/*        sortNums('ascending') // [3,11,21]  */
+/*        sortNums('descending') // [21,11,3] */
+document.write(`<div><h3>____Задание №6____Створити функцію sortNums(direction), яка прймає масив
+чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу
+direction. let nums = [11,21,3]; 
+sortNums('ascending') // [3,11,21] sortNums('descending') // [21,11,3] */</h3></div>`);
+let massTest = [28, 65, 85, 15, 35, 29, 46, 17, 95, 24, 69, 75, 12];
 
+function sortNums(direction) {
+    if (direction === 'vozrastanie') {
+        massTest = massTest.sort(function (a, b) {
+            return a - b;
+        })
+    } else if (direction === 'umenshenia') {
+        massTest = massTest.sort(function (a, b) {
+            return b - a;
+        })
+    } else {
+        return 1;
+    }
+}
 
+console.log('---------------------------------------------------------------');
+console.log(massTest);
 
-
-
-
-
-
-
-
-
-
-
-
+console.log('---------------------------------------------------------------');
+sortNums('vozrastanie');
+console.log(massTest);
+console.log('---------------------------------------------------------------');
+sortNums('umenshenia');
+console.log(massTest);
 
 
 
