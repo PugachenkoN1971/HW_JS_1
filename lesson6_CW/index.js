@@ -168,6 +168,7 @@ document.write(`<div><h3>____Задание №6____Створити функц�
 direction. let nums = [11,21,3]; 
 sortNums('ascending') // [3,11,21] sortNums('descending') // [21,11,3]</h3></div>`);
 let massChis = [28, 65, 85, 15, 35, 29, 46, 17, 95, 24, 69, 75, 12];
+
 function sortNums(direction) {
     if (direction === 'vozrastanie') {
         massChis = massChis.sort(function (a, b) {
@@ -181,6 +182,7 @@ function sortNums(direction) {
         return 1;
     }
 }
+
 console.log('---------------------------------------------------------------');
 console.log(massChis);
 document.write(`<h3>Массив для обработки: ${massChis}</h3>`);
@@ -191,17 +193,17 @@ sortNums('umenshenia');
 document.write(`<h3>Массив, отсортированный на убывание: ${massChis}</h3>`);
 console.log(massChis);
 /**********************************************************************
-/*    7. є масив
-/*          let coursesAndDurationArray = [
-/*                 {title: 'JavaScript Complex', monthDuration: 5},
-/*                 {title: 'Java Complex', monthDuration: 6},
-/*                 {title: 'Python Complex', monthDuration: 6},
-/*                 {title: 'QA Complex', monthDuration: 4},
-/*                 {title: 'FullStack', monthDuration: 7},
-/*                 {title: 'Frontend', monthDuration: 4}
-/*                  ];
-/*      7.1.  Відсортувати його за спаданням за monthDuration
-************************************************************************/
+ /*    7. є масив
+ /*          let coursesAndDurationArray = [
+ /*                 {title: 'JavaScript Complex', monthDuration: 5},
+ /*                 {title: 'Java Complex', monthDuration: 6},
+ /*                 {title: 'Python Complex', monthDuration: 6},
+ /*                 {title: 'QA Complex', monthDuration: 4},
+ /*                 {title: 'FullStack', monthDuration: 7},
+ /*                 {title: 'Frontend', monthDuration: 4}
+ /*                  ];
+ /*      7.1.  Відсортувати його за спаданням за monthDuration
+ ************************************************************************/
 document.write(`<div><h3>____Задание №7____є масив let coursesAndDurationArray = [
 {title: 'JavaScript Complex', monthDuration: 5},
 {title: 'Java Complex', monthDuration: 6},
@@ -213,62 +215,87 @@ document.write(`<div><h3>____Задание №7____є масив let coursesAnd
  7.1.  Відсортувати його за спаданням за monthDuration
 </h3></div>`);
 let coursesAndDurationArray = [
-                 {title: 'JavaScript Complex', monthDuration: 5},
-                 {title: 'Java Complex', monthDuration: 6},
-                 {title: 'Python Complex', monthDuration: 6},
-                 {title: 'QA Complex', monthDuration: 4},
-                 {title: 'FullStack', monthDuration: 7},
-                 {title: 'Frontend', monthDuration: 4}
-                 ];
-console.log('/**************************************************************************************/');
-console.log(coursesAndDurationArray);
-coursesAndDurationArray.sort(function (a, b) {
-    if (a.monthDuration > b.monthDuration) {
-        return 1;
-    }
-    if (a.monthDuration < b.monthDuration) {
-        return -1;
-    }
-    // a должно быть равным b
-    return 0;
-});
-
-console.log('/**************************************************************************************/');
-
-
-console.log('/**************************************************************************************/');
-
-
-
-
-
-
-
-
-
-///let user = new User('kokos', 1111);
-
-
-let items = [
-    { name: 'Edward', value: 21 },
-    { name: 'Sharpe', value: 37 },
-    { name: 'And', value: 45 },
-    { name: 'The', value: -12 },
-    { name: 'Magnetic', value: 25},
-    { name: 'Zeros', value: 39 }
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
 ];
-items.sort(function (a, b) {
-    if (a.value > b.value) {
-        return 1;
+
+let g = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+
+
+console.log('/********************************************************************************/');
+//document.write(`<h3>Массив:  ${key}</h3>`);
+
+for (let key in g) {
+    console.log(key);
+}
+console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+
+let h;
+let t;
+let promT;
+let promM;
+let minT = g[0].title;
+let minM = g[0].monthDuration;
+for (t = 0; t < g.length; t++) {
+    min = g[t].monthDuration;
+    for (h = t; h < g.length; h++) {
+        if (g[h].monthDuration < min) {
+            minT = g[h].title;
+            minM = g[h].monthDuration;
+        }
     }
-    if (a.value < b.value) {
-        return -1;
-    }
-    // a должно быть равным b
-    return 0;
-});
-console.log('/////////////////////////////////////////////////////////////////////////////');
-console.log(items);
+    //document.write(`<h3>Массив:.......${g[h].title}.....${g[h].monthDuration} </h3>`);
+    promT = g[t].title;
+    promM = g[t].monthDuration;
+    g[t].title = minT;
+    g[t].monthDuration = minM;
+}
+/****/
+
+function sortirovka() {
+    coursesAndDurationArray.sort(function (a, b) {
+        if (a.monthDuration > b.monthDuration) {
+            return 1;
+        }
+        if (a.monthDuration < b.monthDuration) {
+            return -1;
+        }
+        return 0;
+    });
+}
+
+sortirovka();
+console.log(coursesAndDurationArray);
+
+/***/
+let k;
+for (k = 0; k < g.length; k++) {
+    document.write(`<h3>${k + 1}. title: ${g[k].title} monthDuration: ${g[k].monthDuration} </h3>`);
+
+}
+//document.write(`<h3>${i + 1}. title: ${g[0].title} monthDuration: ${g[0].monthDuration} </h3>`);
+
+console.log('/**************************************************************************************/');
+
+
+/*  7.2.  Відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців   */
+
+
+
+
+
+
 
 
 
