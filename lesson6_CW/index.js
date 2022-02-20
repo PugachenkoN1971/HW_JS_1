@@ -204,7 +204,7 @@ console.log(massChis);
  /*                  ];
  /*      7.1.  Відсортувати його за спаданням за monthDuration
  ************************************************************************/
-document.write(`<div><h3>____Задание №7____є масив let coursesAndDurationArray = [
+document.write(`<div><h3>____Задание №7.1____є масив let coursesAndDurationArray = [
 {title: 'JavaScript Complex', monthDuration: 5},
 {title: 'Java Complex', monthDuration: 6},
 {title: 'Python Complex', monthDuration: 6},
@@ -222,101 +222,39 @@ let coursesAndDurationArray = [
     {title: 'FullStack', monthDuration: 7},
     {title: 'Frontend', monthDuration: 4}
 ];
-
-let g = [
-    {title: 'JavaScript Complex', monthDuration: 5},
-    {title: 'Java Complex', monthDuration: 6},
-    {title: 'Python Complex', monthDuration: 6},
-    {title: 'QA Complex', monthDuration: 4},
-    {title: 'FullStack', monthDuration: 7},
-    {title: 'Frontend', monthDuration: 4}
-];
-
-
-console.log('/********************************************************************************/');
-//document.write(`<h3>Массив:  ${key}</h3>`);
-
-for (let key in g) {
-    console.log(key);
-}
-console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
-
-let h;
-let t;
-let promT;
-let promM;
-let minT = g[0].title;
-let minM = g[0].monthDuration;
-for (t = 0; t < g.length; t++) {
-    min = g[t].monthDuration;
-    for (h = t; h < g.length; h++) {
-        if (g[h].monthDuration < min) {
-            minT = g[h].title;
-            minM = g[h].monthDuration;
-        }
-    }
-    //document.write(`<h3>Массив:.......${g[h].title}.....${g[h].monthDuration} </h3>`);
-    promT = g[t].title;
-    promM = g[t].monthDuration;
-    g[t].title = minT;
-    g[t].monthDuration = minM;
-}
-/****/
+document.write(`<h3>Массив, отсортированный по убыванию поля "monthDuration":</h3>`);
 
 function sortirovka() {
     coursesAndDurationArray.sort(function (a, b) {
-        if (a.monthDuration > b.monthDuration) {
+        if (a.monthDuration < b.monthDuration) {
             return 1;
         }
-        if (a.monthDuration < b.monthDuration) {
+        if (a.monthDuration > b.monthDuration) {
             return -1;
         }
         return 0;
     });
 }
-
 sortirovka();
-console.log(coursesAndDurationArray);
-
-/***/
-let k;
-for (k = 0; k < g.length; k++) {
-    document.write(`<h3>${k + 1}. title: ${g[k].title} monthDuration: ${g[k].monthDuration} </h3>`);
-
+let p;
+for (p = 0; p < coursesAndDurationArray.length; p++) {
+    document.write(`<h3>${p + 1}. title: ${coursesAndDurationArray[p].title}......
+monthDuration: ${coursesAndDurationArray[p].monthDuration}</h3>`);
 }
-//document.write(`<h3>${i + 1}. title: ${g[0].title} monthDuration: ${g[0].monthDuration} </h3>`);
-
-console.log('/**************************************************************************************/');
-
-
+/*******************************************************************************************/
 /*  7.2.  Відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців   */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.write(`<div><h3>____Задание №7.2____Відфільтрувати , залишивши тільки курси з 
+тривалістю більше 5 місяців</h3></div>`);
+document.write(`<div><h3>Объект до обработки:</h3></div>`);
+for (p = 0; p < coursesAndDurationArray.length; p++) {
+    document.write(`<h3>${p + 1}. title: ${coursesAndDurationArray[p].title}......
+monthDuration: ${coursesAndDurationArray[p].monthDuration}</h3>`);
+}
+let coursesAndDurationArrayOut = coursesAndDurationArray.filter(value => value.monthDuration > 5);
+document.write(`<div><h3>Новый объект, созданный на основании условия: 
+значение поля monthDuration более 5:</h3></div>`);
+for (p = 0; p < coursesAndDurationArrayOut.length; p++) {
+    document.write(`<h3>${p + 1}. title: ${coursesAndDurationArrayOut[p].title}......
+monthDuration: ${coursesAndDurationArrayOut[p].monthDuration}</h3>`);
+}
+document.write(`<h3>/*****************************Конец**********************************/</h3>`);
