@@ -38,12 +38,30 @@ document.write(`<h1>HomeWork #7</h1>`);
 
  *********************************************************************************************************************/
 /*  1. Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone  */
+
 /*       створити пустий масив, наповнити його 10 об'єктами new User(....)                       */
+function User_1(name) {
+    this.name = name;
+    this.isAdmin = false;
+}
 
+let user_1 = new User_1("Вася");
+console.log(user_1.name);
+console.log(user_1.isAdmin);
+console.log('_______________________');
 
-
-
-
+function User(id, name, surname, email, phone) {
+    this.id = id;
+    this.name = name;
+    this.surname = surname;
+    this.email = email;
+    this.phone = phone;
+}
+const user1 = new User(32, 'Oleg', 'Ivaniuk', 'oleg.ivanov@gmail.com', '+380 50 641 6598');
+const user2 = new User(84, 'Irina', 'Petuhova', 'irina.petuhova@gmail.com', '+380 67 621 3254');
+const user3 = new User(54, 'Aleksei', 'Levchenko', 'aleksei.levchenko@gmail.com', '+380 93 563 2489');
+const user = [user1, user2, user3];
+console.log(user);
 
 
 
